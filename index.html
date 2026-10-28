@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de informática, sistemas, redes y ciberseguridad.">
+  <title>Mi Portfolio | Informática</title>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #121c30;
+      --text: #edf2ff;
+      --muted: #a2b0c8;
+      --accent: #65e0c1;
+      --border: #26334b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      max-width: 1050px;
+      margin: auto;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 1050px;
+      margin: auto;
+      padding: 30px 24px 80px;
+    }
+
+    section {
+      padding: 65px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .hero {
+      padding: 100px 0 80px;
+    }
+
+    .tag {
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      line-height: 1.1;
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+
+    .intro, .description {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #08151a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 13px;
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="#inicio">MI PORTFOLIO.</a>
+
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <p class="tag">Informática · Sistemas · Redes</p>
+      <h1>Hola, soy<br>Tu Nombre.</h1>
+
+      <p class="intro">
+        Estudiante de Administración de Sistemas y Redes,
+        interesado en la infraestructura IT, Linux,
+        las redes y la ciberseguridad.
+      </p>
+
+      <div class="buttons">
+        <a class="button primary" href="#proyectos">
+          Ver mis proyectos
+        </a>
+        <a class="button" href="https://github.com/TU-USUARIO"
+           target="_blank" rel="noopener noreferrer">
+          Mi GitHub ↗
+        </a>
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <p class="tag">Presentación</p>
+      <h2>Sobre mí</h2>
+
+      <p class="description">
+        Actualmente estudio informática y desarrollo mis
+        conocimientos en administración de sistemas, redes,
+        servicios Linux, cloud y seguridad informática.
+        Me gusta aprender mediante proyectos prácticos y
+        resolver problemas técnicos.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <p class="tag">Mi trabajo</p>
+      <h2>Proyectos destacados</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Infraestructura Cloud</h3>
+          <p>
+            Proyecto de infraestructura con servicios cloud,
+            configuración de red, proxy inverso y medidas
+            de seguridad. Añade aquí los detalles reales.
+          </p>
+          <a href="https://github.com/TU-USUARIO"
+             target="_blank" rel="noopener noreferrer">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Administración Linux</h3>
+          <p>
+            Prácticas de administración de sistemas,
+            configuración de servicios y resolución
+            de incidencias.
+          </p>
+          <a href="https://github.com/TU-USUARIO"
+             target="_blank" rel="noopener noreferrer">
+            Ver repositorio ↗
+          </a>
+        </article>
+
+        <article class="card">
+          <h3>Redes y servicios</h3>
+          <p>
+            Documentación de prácticas de redes,
+            servicios de comunicaciones y despliegue
+            de aplicaciones.
+          </p>
+          <a href="https://github.com/TU-USUARIO"
+             target="_blank" rel="noopener noreferrer">
+            Ver repositorio ↗
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <p class="tag">Tecnologías</p>
+      <h2>Habilidades técnicas</h2>
+
+      <div class="skills">
+        <span class="skill">Linux</span>
+        <span class="skill">Redes TCP/IP</span>
+        <span class="skill">Python</span>
+        <span class="skill">Docker</span>
+        <span class="skill">Git / GitHub</span>
+        <span class="skill">Google Cloud</span>
+        <span class="skill">Apache</span>
+        <span class="skill">Ciberseguridad</span>
+      </div>
+
+      <p class="description" style="margin-top: 18px">
+        Personaliza esta lista según las tecnologías
+        que realmente conozcas y hayas utilizado.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <p class="tag">Hablemos</p>
+      <h2>Contacto</h2>
+
+      <p class="description">
+        Estoy interesado en seguir aprendiendo y
+        desarrollar mi experiencia profesional en IT.
+      </p>
+
+      <div class="buttons">
+        <a class="button" href="mailto:TU-CORREO">
+          Enviarme un correo
+        </a>
+        <a class="button"
+           href="https://github.com/TU-USUARIO"
+           target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 · Portfolio personal</p>
+  </footer>
+</body>
+</html>
